@@ -1,0 +1,7 @@
+{
+  "name": "orion_front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

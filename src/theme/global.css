@@ -1,0 +1,10 @@
+.spinner{
+    --spinner-color: white !important;
+    --background: rgb(128, 0, 128) !important;
+    color: aliceblue;
+}
+
+ion-icon{
+    color: purple;
+    padding-right: 5px;
+}

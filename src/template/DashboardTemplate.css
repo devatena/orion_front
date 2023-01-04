@@ -1,0 +1,15 @@
+.title-center{
+    color: purple;
+    text-align: center;
+}
+.menu{
+    --background: purple !important;
+}
+.menu ion-title{
+    color: white;
+}
+
+ion-list ion-item{
+cursor: pointer;
+}
+
