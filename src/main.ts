@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
 import { IonicVue, IonPage, IonContent, IonButtons, IonBackButton, IonButton, IonHeader, IonItem, IonList, IonMenu, IonMenuToggle, IonToolbar, IonTitle, IonMenuButton, IonRow, IonCol, IonAccordionGroup, IonAccordion, IonIcon, IonGrid, IonLabel, IonText } from '@ionic/vue';
-import Dashboard from './template/DashboardTemplate.vue'
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
 
@@ -36,7 +36,6 @@ app.component('ion-content', IonContent);
 app.component('ion-page', IonPage);
 app.component('ion-buttons', IonButtons);
 app.component('ion-back-button', IonBackButton);
-app.component('dashboard-template', Dashboard);
 app.component('ion-button', IonButton);
 app.component('ion-header', IonHeader);
 app.component('ion-item', IonItem);

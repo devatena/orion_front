@@ -8,6 +8,9 @@ export default defineComponent({
     },
     methods: {
         ...mapActions('user', ['logout']),
+        close() {
+            this.logout();
+        },
     },
 
 });
