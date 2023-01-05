@@ -1,6 +1,5 @@
 import { defineComponent } from 'vue';
-import { mapState, mapActions} from 'vuex';
-import { menuController } from '@ionic/vue';
+import { mapState, mapActions } from 'vuex';
 import { people } from 'ionicons/icons';
 
 export default defineComponent({
@@ -10,13 +9,12 @@ export default defineComponent({
     },
     methods: {
         ...mapActions('user', ['logout']),
-        closeMenu() {
-            menuController.close('first');
+        close() {
             this.logout();
-          },
+        },
     },
     setup() {
         return { people }
-      }
+    }
 
 });

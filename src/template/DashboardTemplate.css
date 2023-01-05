@@ -1,15 +1,18 @@
-.title-center{
-    color: purple;
-    text-align: center;
+
+nav{
+    background-color: purple !important;
 }
-.menu{
-    --background: purple !important;
+
+.nav-link, .navbar-brand{
+    color:white !important;
 }
-.menu ion-title{
+
+ion-content{
+    --padding-top: 30px;
+    --padding-end: 30px;
+    --padding-start: 30px;
+}
+
+ion-button{
     color: white;
 }
-
-ion-list ion-item{
-cursor: pointer;
-}
-

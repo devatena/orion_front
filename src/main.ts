@@ -25,6 +25,7 @@ import './theme/global.css';
 
 import { store, key } from './store';
 import plugin from './plugins';
+import DashboardTemplate from './template/DashboardTemplate.vue';
 
 const app = createApp(App)
   .use(IonicVue)
@@ -53,6 +54,7 @@ app.component('ion-accordion', IonAccordion);
 app.component('ion-label', IonLabel);
 app.component('ion-text', IonText);
 app.component('ion-icon', IonIcon);
+app.component('app-template', DashboardTemplate);
 
 
   

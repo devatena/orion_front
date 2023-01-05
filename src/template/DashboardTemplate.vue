@@ -1,56 +1,37 @@
 <template>
-  <ion-menu
-    side="start"
-    menu-id="first"
-    content-id="main"
-    swipe-gesture="true"
-    type="push"
-  >
+  <ion-page>
     <ion-header>
-      <ion-toolbar class="menu">
-        <ion-title><p>Menu</p></ion-title>
-      </ion-toolbar>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home">ORION</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <ion-button router-link="/client" expand="block" fill="clear" shape="round">
+                 Gestão Comercial
+                </ion-button>
+                
+              </li>
+
+            </ul>
+            <button v-on:click="close()" class="btn btn-outline-light">SAIR</button>
+          </div>
+        </div>
+      </nav>
     </ion-header>
     <ion-content>
-      <ion-list>
-        <ion-accordion-group>
-          <ion-accordion value="first">
-            <ion-item slot="header" color="light">
-              <ion-label>Gestão Comercial</ion-label>
-            </ion-item>
-            <div class="ion-padding" slot="content">
-              <ion-item router-link="/client">
-                <ion-icon :icon="people"></ion-icon>
-                Clientes
-              </ion-item>
-            </div>
-          </ion-accordion>
-        </ion-accordion-group>
-
-        <ion-item v-on:click="closeMenu()">Sair</ion-item>
-      </ion-list>
+        <slot></slot>
     </ion-content>
-  </ion-menu>
-
-  <div class="ion-page" id="main">
-    <ion-content>
-      <ion-header>
-        <ion-toolbar class="title-center">
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-          <ion-title router-link="/home">Orion</ion-title>
-          <ion-buttons slot="end">
-            <ion-button>
-              {{ user.name }}
-            </ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
-      <slot></slot>
-    </ion-content>
-  </div>
+  
+  </ion-page>
 </template>
 
 <script lang="ts" src="./DashboardTemplate.ts"></script>
-<style scoped  src="./DashboardTemplate.css"></style>
+<style scoped  src="./DashboardTemplate.css">
+
+</style>
