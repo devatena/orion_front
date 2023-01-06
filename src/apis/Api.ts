@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const Api = axios.create ({
-     baseURL: 'http://localhost:8000/api', //colocar alguma env var, se quiser
-   //  baseURL: 'https://mopservicos.xyz/api/',
+     baseURL: 'http://localhost:8000/api'
+    // baseURL: 'https://orion.atenaagencia.com/orion_back/public/api',
  });
 
 axios.defaults.withCredentials = true;
