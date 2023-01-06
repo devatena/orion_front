@@ -1,11 +1,11 @@
-
+/* 
 nav{
     background-color: purple !important;
 }
 
 .nav-link, .navbar-brand{
     color:white !important;
-}
+} */
 
 ion-content{
     --padding-top: 30px;
@@ -13,6 +13,6 @@ ion-content{
     --padding-start: 30px;
 }
 
-ion-button{
+/* ion-button{
     color: white;
-}
+} */

@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import CardComponent from '@/components/CardComponent.vue'
+import CardComponent from '@/components/Card/CardComponent.vue'
 
 export default defineComponent({
     name: 'GestaoComercial',

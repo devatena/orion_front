@@ -21,6 +21,7 @@
                     placeholder="Usuário"
                     v-model="dados.cpf"
                     autocomplete="off"
+                    required
                   />
 
                   <input
@@ -29,6 +30,7 @@
                     placeholder="Senha"
                     v-model="dados.password"
                     min="0"
+                    required
                   />
                 </div>
                 <div class="box-button">

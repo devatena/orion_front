@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue';
 import { mapState, mapActions, mapMutations } from 'vuex';
-import CardComponent from '@/components/CardComponent.vue'
+import CardComponent from '@/components/Card/CardComponent.vue'
 
 export default defineComponent({
     name: 'DashboardPage',

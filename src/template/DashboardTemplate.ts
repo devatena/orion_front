@@ -1,20 +1,10 @@
 import { defineComponent } from 'vue';
-import { mapState, mapActions } from 'vuex';
-import { people } from 'ionicons/icons';
+import NavbarComponent from '@/components/Navbar/NavbarComponent.vue'
 
 export default defineComponent({
     name: 'DashboardTemplate',
-    computed: {
-        ...mapState('user', ['user'])
-    },
-    methods: {
-        ...mapActions('user', ['logout']),
-        close() {
-            this.logout();
-        },
-    },
-    setup() {
-        return { people }
+    components: {
+        NavbarComponent,
     }
 
 });

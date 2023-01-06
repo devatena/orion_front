@@ -1,6 +1,6 @@
 import User from "@/apis/User";
 import router from '@/router'
-import { loadingController } from "@ionic/vue";
+import { loadingController, alertController } from "@ionic/vue";
 
 const state = {
     dados: {
@@ -40,9 +40,16 @@ const actions = {
                 return router.push('/home');
 
             },
-            error => {
+            async error => {
                 loading.dismiss();
-                alert('Login inválido');
+                const alert = await alertController.create({
+                    message: 'Login inválido',
+                    buttons: ['OK'],
+                    cssClass: 'ion-alert'
+                });
+                alert.present();
+
+             
             }
         );
 
