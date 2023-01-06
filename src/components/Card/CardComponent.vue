@@ -3,7 +3,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <p class="card-text">{{ description }}</p>
-            <ion-button :router-link="link" expand="block" fill="clear" shape="round">
+            <ion-button :router-link="{name: link}" expand="block" fill="clear" shape="round">
                Acessar
             </ion-button>
         </div>

@@ -1,7 +1,7 @@
 import AuthRoute from '@/views/auth/AuthRoute';
-import ClientsRoute from '@/views/clients/ClientsRoute';
+import ClientsRoute from '@/views/gestao-comercial/clients/ClientsRoute';
 import DashbordRoute from '@/views/dashboard/DashboardRoute';
-import GestaoComercialRoute from '@/views/gestao-comercial/GestaoComercialRoute';
+import GestaoComercialRoute from '@/views/gestao-comercial/home/GestaoComercialRoute';
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 

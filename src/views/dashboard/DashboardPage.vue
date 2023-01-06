@@ -5,7 +5,7 @@
         <CardComponent
         title="Gestão Comercial"
         description="Prospects, Clientes e Vendas"
-        link="/gestao-comercial"></CardComponent>
+        link="gestao-comercial"></CardComponent>
       </div>
     </div>
   </app-template>
