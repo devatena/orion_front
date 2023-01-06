@@ -11,6 +11,11 @@ const ClientsRoute: Array<RouteRecordRaw> = [
         name: 'show-client',
         component: () => import('@/views/gestao-comercial/clients/show-clients/ShowClientsPage.vue'),
       },
+      {
+        path: 'index',
+        name: 'index-client',
+        component: () => import('@/views/gestao-comercial/clients/index/IndexClient.vue'),
+      },
     ]
   }
 ]
