@@ -1,9 +1,10 @@
 <template>
     <app-template>
         <div class="container">
+            <h1>Cadastro de Cliente </h1>
             <form>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="isPhysicalPerson">
+                    <input type="checkbox" class="form-check-input" id="isPhysicalPerson" v-on:change="isPhysicalPerson($event)">
                     <label class="form-check-label" for="isPhysicalPerson">Sou uma pessoa jurídica</label>
                 </div>
                 <div class="mb-3">
@@ -20,21 +21,21 @@
                 </div>
                 <div class="mb-3">
                     <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column" v-if="checkbox">
                             <label for="inputCorporateName" class="form-label">Razão social</label>
-                            <input type="text" class="form-control half-size" id="inputCorporateName" disabled>
+                            <input type="text" class="form-control half-size" id="inputCorporateName">
                         </div>
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column" v-if="checkbox">
                             <label for="inputFantasyName" class="form-label">Nome fantasia</label>
-                            <input type="text" class="form-control half-size" id="inputFantasyName" disabled>
+                            <input type="text" class="form-control half-size" id="inputFantasyName" >
                         </div>   
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-column">
+                        <div class="d-flex flex-column" v-if="checkbox">
                             <label for="inputCNPJ" class="form-label">CNPJ</label>
-                            <input type="text" class="form-control quarter-size" id="inputCNPJ" disabled>
+                            <input type="text" class="form-control quarter-size" id="inputCNPJ" >
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputCPF" class="form-label">CPF</label>
@@ -54,18 +55,15 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <p style="height: 8px;">Sexo</p>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="genderMale" name="flexRadioDefault">
-                                <label class="form-check-label" for="genderMale">Masculino</label>
+                            <div class="">
+                                <select name="" id="" class="form-select half-size">
+                                    <option value="">-------</option>
+                                    <option value="">Masculino</option>
+                                    <option value="">Feminino</option>
+                                </select>
+
                             </div>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="genderFemale" name="flexRadioDefault">
-                                <label class="form-check-label" for="genderFemale">Feminino</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="genderOther" name="flexRadioDefault">
-                                <label class="form-check-label" for="genderOther">Outro</label>
-                            </div>   
+
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputBirthday" class="form-label">Data de nascimento</label>
@@ -104,7 +102,7 @@
                             <input type="text" class="form-control third-size" id="inputStreet">
                         </div>
                         <div class="d-flex flex-column">
-                            <label for="inputNumber" class="form-label">CEP</label>
+                            <label for="inputNumber" class="form-label">Número</label>
                             <input type="text" class="form-control third-size" id="inputNumber">
                         </div>
                     </div>
