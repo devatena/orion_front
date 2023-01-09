@@ -6,7 +6,13 @@
         <CardComponent
         title="Cadastro de Clientes"
         description="Prospects, Clientes e Vendas"
-        link="client"></CardComponent>
+        link="index-client"></CardComponent>
+      </div>
+      <div class="col-sm-3 mb-3 mb-sm-0">
+        <CardComponent
+        title="Show de Clientes"
+        description="Prospects, Clientes e Vendas"
+        link="show-client"></CardComponent>
       </div>
     </div>
   </app-template>

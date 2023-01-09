@@ -9,7 +9,7 @@ export const routes = ([] as Array<RouteRecordRaw>).concat(AuthRoute, DashbordRo
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 })
 
 router.beforeEach((to, from, next) => {
