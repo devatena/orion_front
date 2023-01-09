@@ -1,5 +1,16 @@
 <template>
     <app-template>
-        <h1>hggfghfh</h1>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <ion-icon :icon="personAddOutline"></ion-icon>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4">
+
+            </div>
+        </div>
     </app-template>
 </template>
+<script lang="ts" src="./IndexClient.ts"></script>
