@@ -30,8 +30,8 @@ import DashboardTemplate from './template/DashboardTemplate.vue';
 const app = createApp(App)
   .use(IonicVue)
   .use(router)
-  .use(store, key)
-  .use(plugin);
+  .use(store, key);
+  // .use(plugin);
 
 app.component('ion-content', IonContent);
 app.component('ion-page', IonPage);

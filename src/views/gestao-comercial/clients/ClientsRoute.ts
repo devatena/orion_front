@@ -16,6 +16,11 @@ const ClientsRoute: Array<RouteRecordRaw> = [
       name: 'show-client',
       component: () => import('@/views/gestao-comercial/clients/show-clients/ShowClientsPage.vue'),
     },
+    {
+      path:'/client/create',
+      name: 'create-client',
+      component: ()=> import('@/views/gestao-comercial/clients/create-client/createClient.vue'),
+    }
 ]
 
 export default ClientsRoute;
