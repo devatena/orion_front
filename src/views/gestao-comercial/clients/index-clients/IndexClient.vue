@@ -10,7 +10,7 @@ import { clipboardOutline } from 'ionicons/icons';
                     <CardComponent
                     title="Cadastro de cliente"
                     description=""
-                    link="#"></CardComponent>
+                    link="create-client"></CardComponent>
                 </div>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-4">
