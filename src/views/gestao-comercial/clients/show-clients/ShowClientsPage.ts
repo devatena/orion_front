@@ -1,10 +1,10 @@
 import { defineComponent } from 'vue';
-import { airplaneOutline } from 'ionicons/icons';
+import { IonInput } from '@ionic/vue'
 export default defineComponent({
     name: 'ShowClientsPage',
     setup(){
         return{
-            airplaneOutline
+            IonInput
         }
     }
     

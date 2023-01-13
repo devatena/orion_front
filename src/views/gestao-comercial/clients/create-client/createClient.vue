@@ -1,9 +1,13 @@
 <template>
     <app-template>
         <div class="container">
+            <div class="mt-4 mb-4 d-flex justify-content-between align-items-center">
+                <h1>Cadastro de clientes</h1>
+                <ion-button class="me-5" router-link="/client/index" expand="block" fill="solid" color="danger">Voltar</ion-button>
+            </div>
             <form>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="isPhysicalPerson">
+                    <input type="checkbox" class="form-check-input" id="isPhysicalPerson" @click="changeDisable()">
                     <label class="form-check-label" for="isPhysicalPerson">Sou uma pessoa jurídica</label>
                 </div>
                 <div class="mb-3">
@@ -46,26 +50,20 @@
                         </div> 
                         <div class="d-flex flex-column">
                             <label for="inputIssuer" class="form-label">Emissor</label>
-                            <input type="text" class="form-control quarter-size">
+                            <input type="text" class="form-control quarter-size" id="inputIssuer">
                         </div>  
                     </div>
                 </div>
                 <div class="mb-3">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
-                            <p style="height: 8px;">Sexo</p>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="genderMale" name="flexRadioDefault">
-                                <label class="form-check-label" for="genderMale">Masculino</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="genderFemale" name="flexRadioDefault">
-                                <label class="form-check-label" for="genderFemale">Feminino</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" class="form-check-input" id="genderOther" name="flexRadioDefault">
-                                <label class="form-check-label" for="genderOther">Outro</label>
-                            </div>   
+                            <label for="selectGender" class="form-label">Sexo</label>
+                           <select class="form-select half-size" id="selectGender">
+                            <option selected>----------------</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                            <option value="3">Outro</option>
+                           </select>
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputBirthday" class="form-label">Data de nascimento</label>
@@ -125,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <ion-button form fill="solid">Enviar</ion-button>
             </form>
         </div>
     </app-template>
