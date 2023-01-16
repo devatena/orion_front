@@ -102,7 +102,7 @@
                             <input type="text" class="form-control third-size" id="inputStreet">
                         </div>
                         <div class="d-flex flex-column">
-                            <label for="inputNumber" class="form-label">CEP</label>
+                            <label for="inputNumber" class="form-label">Número</label>
                             <input type="text" class="form-control third-size" id="inputNumber">
                         </div>
                     </div>
