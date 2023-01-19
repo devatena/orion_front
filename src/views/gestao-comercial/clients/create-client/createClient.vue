@@ -3,9 +3,24 @@
         <div class="container">
             <PageHeaderComponent title="Cadastro de Clientes"></PageHeaderComponent>
             <form>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="isPhysicalPerson" @click="changeDisable()">
-                    <label class="form-check-label" for="isPhysicalPerson">Sou uma pessoa jurídica</label>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column">
+                            <label for="selectPhysicPerson" class="form-label">Tipo de cliente</label>
+                           <select class="form-select half-size" id="selectPhysicPerson" @change="changeDisable()">
+                            <option selected value="0">Pessoa física</option>
+                            <option value="1">Pessoa jurídica</option>
+                           </select>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <label for="selectGender" class="form-label">Status</label>
+                           <select class="form-select half-size" id="selectGender">
+                            <option selected>----------------</option>
+                            <option value="1">Cliente</option>
+                            <option value="2">Prospect</option>
+                           </select>
+                        </div>   
+                    </div>
                 </div>
                 <div class="mb-3">
                     <div class="d-flex justify-content-between">

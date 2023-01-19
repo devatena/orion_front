@@ -8,7 +8,7 @@ export default defineComponent({
     },
     methods: {
         changeDisable(){
-            const Icheck:  any  = document.getElementById("isPhysicalPerson");
+            const Select:  any  = document.getElementById("selectPhysicPerson");
             const Iname:  any  = document.getElementById("inputName");
             const Inickname:  any  = document.getElementById("inputNickname");
             const IcorporateName:  any  = document.getElementById("inputCorporateName");
@@ -16,8 +16,8 @@ export default defineComponent({
             const Icnpj:  any  = document.getElementById("inputCNPJ");
             const Iissuer:  any  = document.getElementById("inputIssuer");
             const Irg:  any  = document.getElementById("inputRG");
-            console.log(Icheck.checked)
-            if(Icheck.checked == true){
+            
+            if(Select.value == 1){
                 Iname.disabled = true;
                 Inickname.disabled = true;
                 Iissuer.disabled = true;

@@ -71,23 +71,28 @@ export default defineComponent({
             others: [
                 {
                 nome: 'Carlos',
-                id: '1'
+                id: '1',
+                status: 'prospect'
                 },
                 {
                 nome: 'Daniel',
-                id: '2'
+                id: '2',
+                status: 'prospect'
                 },
                 {
                 nome: 'Caio',
-                id: '3'
+                id: '3',
+                status: 'cliente'
                 },
                 {
                 nome: 'Patrick',
-                id: '4'
+                id: '4',
+                status: 'prospect'
                 },
                 {
                 nome: 'Daniel',
-                id: '5'    
+                id: '5',
+                status: 'cliente'    
                 }
 
             ]   

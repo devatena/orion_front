@@ -3,7 +3,7 @@
     <div class="container">
         <PageHeaderComponent title="Consultar Cliente"></PageHeaderComponent>
         <div class="inner d-flex flex-column justify-content-center align-items-center">
-          <div class="container-fluid">
+          <div class="container-fluid mt-4">
             <ion-input placeholder="Custom" v-model="searchUser" class="custom">
               <ion-icon class="ms-3" :icon="searchOutline" ></ion-icon>
             </ion-input>
@@ -14,7 +14,8 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Nome</th>
-                  <!--<th scope="col">CPF</th>-->
+                  <th scope="col">Status</th>
+                  <th scope="col">...</th>
                 
                 </tr>
               </thead>
@@ -22,6 +23,12 @@
                 <tr v-for="other in others">
                   <td id="clientID">{{ other.id }}</td>
                   <td id="clientName">{{ other.nome }}</td>
+                  <td id="clientStatus"> {{ other.status }}</td>
+                  <td>
+                    <div class="d-flex">
+                      <ion-button class="go-to-profile" router-link="/client/profile" expand="block" fill="solid">Abrir na página de Clientes</ion-button>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>   
