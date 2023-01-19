@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row hero p-3">
             <div class="col-4">
-                <div class="card text-center">
+                <div class="card text-center main-prof-card">
                     <img src="https://yt3.ggpht.com/a/AATXAJznu9Ke3t9h1yW2wwwJ01g1qaHOyl7SCI4_PA=s900-c-k-c0xffffffff-no-rj-mo" alt="profile pic">
                     <div class="card-body">
                         <h4>Nome: {{ name }}</h4>
@@ -79,7 +79,7 @@
                             <div class="accordion-body">
                                 <div class="card">
                                     <div class="card-body">
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim tortor at auctor urna nunc id cursus metus aliquam. Eu feugiat pretium nibh ipsum consequat nisl vel. Libero nunc consequat interdum varius. In fermentum posuere urna nec tincidunt praesent semper.</p>
+                                        <p class="card-text text-exeption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim tortor at auctor urna nunc id cursus metus aliquam. Eu feugiat pretium nibh ipsum consequat nisl vel. Libero nunc consequat interdum varius. In fermentum posuere urna nec tincidunt praesent semper.</p>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +125,41 @@ img{
 }
 
 .hero{
-    background-color: #e6e6e6;
+    /* background-color: #e6e6e6; */
+}
+.main-prof-card{
+    color: purple;
+}
+
+.text-exeption{
+    background-color: white;
+    color: purple;
+}
+
+li, p{
+    font-size: 12px;
+    background-color: plum;
+    color: white;
+}
+
+h5{
+    font-size: 16px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+
+
+.accordion-button{
+    background-color: white;
+    color: purple;
+}
+
+.accordion-button:hover{
+    background-color: purple;
+    color: white;
 }
 
 </style>
