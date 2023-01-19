@@ -1,10 +1,7 @@
 <template>
     <app-template>
         <div class="container">
-            <div class="mt-4 mb-4 d-flex justify-content-between align-items-center">
-                <h1>Cadastro de clientes</h1>
-                <ion-button class="me-5" router-link="/client/index" expand="block" fill="solid" color="danger">Voltar</ion-button>
-            </div>
+            <PageHeaderComponent title="Cadastro de Clientes"></PageHeaderComponent>
             <form>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="isPhysicalPerson" @click="changeDisable()">

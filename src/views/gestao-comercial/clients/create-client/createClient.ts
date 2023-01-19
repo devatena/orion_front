@@ -1,9 +1,10 @@
 import { defineComponent } from 'vue';
 import { stringifyQuery } from 'vue-router';
+import PageHeaderComponent from '@/components/Page-header/PageHeaderComponent.vue'
 export default defineComponent({
-    name: 'IndexClient',
+    name: 'createClient',
     components: {
-       
+       PageHeaderComponent
     },
     methods: {
         changeDisable(){

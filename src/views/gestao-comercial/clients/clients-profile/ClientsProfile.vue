@@ -1,9 +1,13 @@
 
+import PageHeaderComponent from '@/components/Page-header/PageHeaderComponent.vue';
+
+
 import ProfileComponent from '@/components/Profile/ProfileComponent.vue';
 
 <template>
 <app-template>
     <div class="container">
+        <PageHeaderComponent title="Lista de clientes"></PageHeaderComponent>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <ProfileComponent

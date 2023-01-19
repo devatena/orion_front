@@ -1,8 +1,12 @@
 import { defineComponent } from 'vue';
 import { searchOutline } from 'ionicons/icons';
+import PageHeaderComponent from '@/components/Page-header/PageHeaderComponent.vue'
+
 export default defineComponent({
     name: 'ShowClientsPage',
-    
+    components: {
+        PageHeaderComponent,
+    },    
     setup(){
         return{
             searchOutline,
