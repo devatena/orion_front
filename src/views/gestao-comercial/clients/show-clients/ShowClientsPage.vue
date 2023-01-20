@@ -20,7 +20,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="other in others">
+                <tr v-for="other in others" :key="other.id">
                   <td id="clientID">{{ other.id }}</td>
                   <td id="clientName">{{ other.nome }}</td>
                   <td id="clientStatus"> {{ other.status }}</td>
