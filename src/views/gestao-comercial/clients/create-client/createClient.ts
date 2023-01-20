@@ -1,23 +1,41 @@
 import { defineComponent } from 'vue';
-// import ViaCep from '@/apis/ViaCep';
+import { stringifyQuery } from 'vue-router';
+import PageHeaderComponent from '@/components/Page-header/PageHeaderComponent.vue'
 export default defineComponent({
-    name: 'IndexClient',
-    data() {
-        return {
-            checkbox: false,
-        }
-    },
+    name: 'createClient',
     components: {
-
+       PageHeaderComponent
     },
     methods: {
-        isPhysicalPerson(e: any) {
-            if (e.target.checked == true) {
-                this.checkbox = true;
-            }else{
-                this.checkbox = false;
+        changeDisable(){
+            const Select:  any  = document.getElementById("selectPhysicPerson");
+            const Iname:  any  = document.getElementById("inputName");
+            const Inickname:  any  = document.getElementById("inputNickname");
+            const IcorporateName:  any  = document.getElementById("inputCorporateName");
+            const IfantasyName:  any  = document.getElementById("inputFantasyName");
+            const Icnpj:  any  = document.getElementById("inputCNPJ");
+            const Iissuer:  any  = document.getElementById("inputIssuer");
+            const Irg:  any  = document.getElementById("inputRG");
+            
+            if(Select.value == 1){
+                Iname.disabled = true;
+                Inickname.disabled = true;
+                Iissuer.disabled = true;
+                Irg.disabled = true;
+                IcorporateName.disabled = false;
+                IfantasyName.disabled = false;
+                Icnpj.disabled = false;
+
+            } else {
+                Iname.disabled = false;
+                Inickname.disabled = false;
+                Iissuer.disabled = false;
+                Irg.disabled = false;
+                IcorporateName.disabled = true;
+                IfantasyName.disabled = true;
+                Icnpj.disabled = true;
             }
         },
-       
     }
 });
+
