@@ -26,11 +26,11 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="inputName" class="form-label">Nome do cliente</label>
-                            <input type="text" class="form-control half-size" id="inputName">
+                            <input type="text" class="form-control half-size" id="inputName" v-model="form.name">
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputNickname" class="form-label">Apelido</label>
-                            <input type="text" class="form-control half-size" id="inputNickname">
+                            <input type="text" class="form-control half-size" id="inputNickname" v-model="form.nickname">
                         </div>   
                     </div>
                 </div>
@@ -38,11 +38,11 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="inputCorporateName" class="form-label">Razão social</label>
-                            <input type="text" class="form-control half-size" id="inputCorporateName" disabled>
+                            <input type="text" class="form-control half-size" id="inputCorporateName" v-model="form.corporate_name" disabled>
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputFantasyName" class="form-label">Nome fantasia</label>
-                            <input type="text" class="form-control half-size" id="inputFantasyName" disabled>
+                            <input type="text" class="form-control half-size" id="inputFantasyName" v-model="form.fantasy_name" disabled>
                         </div>   
                     </div>
                 </div>
@@ -50,19 +50,19 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="inputCNPJ" class="form-label">CNPJ</label>
-                            <input type="text" class="form-control quarter-size" id="inputCNPJ" disabled>
+                            <input type="text" class="form-control quarter-size" id="inputCNPJ" v-model="form.cnpj" disabled>
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputCPF" class="form-label">CPF</label>
-                            <input type="text" class="form-control quarter-size" id="inputCPF">
+                            <input type="text" class="form-control quarter-size" id="inputCPF" v-model="form.cpf">
                         </div> 
                         <div class="d-flex flex-column">
                             <label for="inputRG" class="form-label">RG</label>
-                            <input type="text" class="form-control quarter-size" id="inputRG">
+                            <input type="text" class="form-control quarter-size" id="inputRG" v-model="form.rg">
                         </div> 
                         <div class="d-flex flex-column">
                             <label for="inputIssuer" class="form-label">Emissor</label>
-                            <input type="text" class="form-control quarter-size" id="inputIssuer">
+                            <input type="text" class="form-control quarter-size" id="inputIssuer" v-model="form.issuer">
                         </div>  
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="selectGender" class="form-label">Sexo</label>
-                           <select class="form-select half-size" id="selectGender">
+                           <select class="form-select half-size" id="selectGender" v-model="form.gender">
                             <option selected>----------------</option>
                             <option value="1">Masculino</option>
                             <option value="2">Feminino</option>
@@ -79,7 +79,7 @@
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputBirthday" class="form-label">Data de nascimento</label>
-                            <input type="date" class="form-control half-size" id="inputBirthday">
+                            <input type="date" class="form-control half-size" id="inputBirthday" v-model="form.birthday">
                         </div>   
                     </div>
                 </div>
@@ -87,35 +87,35 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="inputTelephone" class="form-label">Telefone</label>
-                            <input type="text" class="form-control half-size" id="inputTelephone">
+                            <input type="text" class="form-control half-size" id="inputTelephone" v-model="form.telephone">
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputCellphone" class="form-label">Celular/Whatsapp</label>
-                            <input type="text" class="form-control half-size" id="inputCellphone">
+                            <input type="text" class="form-control half-size" id="inputCellphone" v-model="form.cellphone">
                         </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail">
+                    <input type="email" class="form-control" id="inputEmail" v-model="form.email">
                 </div>
                 <div class="mb-3">
                     <label for="inputSite" class="form-label">Site do cliente</label>
-                    <input type="text" class="form-control" id="inputSite">
+                    <input type="text" class="form-control" id="inputSite" v-model="form.site">
                 </div>
                 <div class="mb-3">
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="inputCEP" class="form-label">CEP</label>
-                            <input type="text" class="form-control third-size" id="inputCEP">
+                            <input type="text" @change="searchCep()" class="form-control third-size" id="inputCEP" v-model="form.cep">
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputStreet" class="form-label">Rua</label>
-                            <input type="text" class="form-control third-size" id="inputStreet">
+                            <input type="text" class="form-control third-size" id="inputStreet" v-model="form.street">
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputNumber" class="form-label">Número</label>
-                            <input type="text" class="form-control third-size" id="inputNumber">
+                            <input type="text" class="form-control third-size" id="inputNumber" v-model="form.number">
                         </div>
                     </div>
                 </div>
@@ -123,19 +123,19 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="inputComplement" class="form-label">Complemento</label>
-                            <input type="text" class="form-control third-size" id="inputComplement">
+                            <input type="text" class="form-control third-size" id="inputComplement" v-model="form.complement">
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputNeighborhood" class="form-label">Bairro</label>
-                            <input type="text" class="form-control third-size" id="inputNeighborhood">
+                            <input type="text" class="form-control third-size" id="inputNeighborhood" v-model="form.neighborhood">
                         </div>
                         <div class="d-flex flex-column">
                             <label for="inputTown" class="form-label">Cidade</label>
-                            <input type="text" class="form-control third-size" id="inputTown">
+                            <input type="text" class="form-control third-size" id="inputTown" v-model="form.town">
                         </div>
                     </div>
                 </div>
-                <ion-button form fill="solid">Enviar</ion-button>
+                <ion-button form fill="solid" @click="submitForm()">Enviar</ion-button>
             </form>
         </div>
     </app-template>
