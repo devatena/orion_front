@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue';
+import { defineComponent, getTransitionRawChildren } from 'vue';
 import { stringifyQuery } from 'vue-router';
 import PageHeaderComponent from '@/components/Page-header/PageHeaderComponent.vue'
 import apiCorreios from '@/apis/Api';
@@ -37,6 +37,7 @@ export default defineComponent({
             complement: '',
             neighborhood: '',
             town: '',
+            status: 'prospect'
 
         }
        } 
@@ -86,21 +87,19 @@ export default defineComponent({
 
         searchCep() {
             //console.log('aasdasdasd')
-            const Icep: any = document.getElementById("inputCEP")
-            const Istreet: any = document.getElementById("inputStreet")
-            const Ineighborhood: any = document.getElementById("inputNeighborhood")
-            const Itown: any = document.getElementById("inputTown")
-            const Icomplement: any = document.getElementById("inputComplement")
-            const Inumber: any = document.getElementById("inputNumber")
-            console.log(Icep.value)
-            apiCorreios.get('https://viacep.com.br/ws/' + Icep.value + '/json/').then(
+            // const Icep: any = document.getElementById("inputCEP")
+            // const Istreet: any = document.getElementById("inputStreet")
+            // const Ineighborhood: any = document.getElementById("inputNeighborhood")
+            // const Itown: any = document.getElementById("inputTown")
+            // const Icomplement: any = document.getElementById("inputComplement")
+            // const Inumber: any = document.getElementById("inputNumber")
+            // console.log(Icep.value)
+            apiCorreios.get('https://viacep.com.br/ws/' + this.form.cep+ '/json/').then(
                 (response) => {
                     console.log(response)
-                    Istreet.value = response.data.logradouro
-                    Ineighborhood.value = response.data.bairro
-                    Itown.value = response.data.localidade
-                    Inumber.value = ""
-                    Icomplement.value = ""
+                    this.form.street = response.data.logradouro
+                    this.form.neighborhood = response.data.bairro
+                    this.form.town = response.data.localidade
                 }
                 
             )

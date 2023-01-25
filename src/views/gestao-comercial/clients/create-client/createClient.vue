@@ -14,10 +14,10 @@
                         </div>
                         <div class="d-flex flex-column">
                             <label for="selectGender" class="form-label">Status</label>
-                           <select class="form-select half-size" id="selectGender">
+                           <select class="form-select half-size" id="selectGender" v-model="form.status">
                             <option selected>----------------</option>
-                            <option value="1">Cliente</option>
-                            <option value="2">Prospect</option>
+                            <option value="ativo">Cliente</option>
+                            <option value="prospect">Prospect</option>
                            </select>
                         </div>   
                     </div>
