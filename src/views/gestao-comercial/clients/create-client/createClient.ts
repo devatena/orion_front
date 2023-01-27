@@ -17,6 +17,7 @@ export default defineComponent({
     data() {
        return{
         form: {
+            isPhysicalPerson: '',
             name: '',
             corporate_name: '',
             nickname: '',

@@ -7,19 +7,45 @@ export default defineComponent({
     name: 'ShowClientsPage',
     components: {
         PageHeaderComponent,
-    },  
+    }, 
+     data() {
+        return{
+            clients: '',
+            search: '',
+            someID: ''
+        }
+    },
+    
+    methods: {
+        getId(id: any){ 
+            console.log(id)
+            this.$router.push('/client/profile/' + id)
+        },
+
+        searchClient(){
+            console.log(this.search)
+                    if(this.search != ''){
+                        Api.get('/client/show/'+this.search).then(
+                            (response) => {
+                                this.clients = response.data.client;
+                        })
+                    }
+                    else{
+                        Api.get('/client').then(
+                            (response) => {
+                                console.log(response.data.client);
+                                this.clients = response.data.client;       
+                        })
+                    }
+                    
+                }
+            
+        },
     mounted(){
         Api.get('/client').then(
             (response) => {
                 console.log(response.data.client);
-                this.clients = response.data.client;
-                // for(const client in response.data.client){
-                //     console.log(response.data.client[client])
-                //     this.clients.name = response.data.client[client].name
-                //     this.clients.id = response.data.client[client].id
-                //     this.clients.cpf = response.data.client[client].cpf
-                // }
-                
+                this.clients = response.data.client;       
         })
     },  
     setup(){
@@ -32,10 +58,5 @@ export default defineComponent({
             
     //     } 
     // },
-    data() {
-        return{
-            clients: ''
-        }
-    }
-    
+   
 });

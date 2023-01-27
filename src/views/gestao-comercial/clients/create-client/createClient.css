@@ -9,3 +9,7 @@
 .third-size{
     width: 26.7vw;
 }
+
+ion-button{
+    --background: purple;
+}

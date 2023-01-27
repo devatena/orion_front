@@ -22,7 +22,7 @@ const ClientsRoute: Array<RouteRecordRaw> = [
       component: ()=> import('@/views/gestao-comercial/clients/create-client/createClient.vue'),
     },
     {
-      path:'/client/profile',
+      path:'/client/profile/:id',
       name: 'client-profile',
       component: ()=> import('@/views/gestao-comercial/clients/clients-profile/ClientsProfile.vue'),
     }

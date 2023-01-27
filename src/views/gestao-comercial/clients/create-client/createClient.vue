@@ -7,7 +7,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="d-flex flex-column">
                             <label for="selectPhysicPerson" class="form-label">Tipo de cliente</label>
-                           <select class="form-select half-size" id="selectPhysicPerson" @change="changeDisable()">
+                           <select class="form-select half-size" id="selectPhysicPerson" @change="changeDisable()" v-model="form.isPhysicalPerson">
                             <option selected value="0">Pessoa física</option>
                             <option value="1">Pessoa jurídica</option>
                            </select>
@@ -72,9 +72,9 @@
                             <label for="selectGender" class="form-label">Sexo</label>
                            <select class="form-select half-size" id="selectGender" v-model="form.gender">
                             <option selected>----------------</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                            <option value="3">Outro</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outros">Outro</option>
                            </select>
                         </div>
                         <div class="d-flex flex-column">
